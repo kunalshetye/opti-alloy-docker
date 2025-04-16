@@ -1,0 +1,43 @@
+services:
+  sqlserver:
+    #image: mcr.microsoft.com/mssql/server:2022-latest
+    #If using sql server 2022 read this -  https://devblogs.microsoft.com/azure-sql/development-with-sql-in-containers-on-macos/
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    environment:
+      - ACCEPT_EULA=1
+      - MSSQL_SA_PASSWORD=YourStrong!Password
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./sql:/var/opt/mssql
+    networks:
+      - cms-network
+
+  cms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PROJECT=test
+      - DB_SERVER=sqlserver
+      - DB_USER=sa
+      - DB_PASS="YourStrong!Password"
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "4747:5000"
+    depends_on:
+      - sqlserver
+    networks:
+      - cms-network
+    volumes:
+      - ./cms:/app
+
+networks:
+  cms-network:
+    driver: bridge
+
+volumes:
+  sqlserver-data:
+    driver: local
+  cms:
+    driver: local
