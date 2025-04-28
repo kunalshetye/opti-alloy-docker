@@ -1,0 +1,724 @@
+{
+	"info": {
+		"_postman_id": "45f5d522-1b9e-4aa2-b621-f5321faaad48",
+		"name": "Content APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11979951"
+	},
+	"item": [
+		{
+			"name": "Content Delivery API",
+			"item": [
+				{
+					"name": "Get Site",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/site",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"site"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Content By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/content/17/",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"content",
+								"17",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Content By Id With Child Blocks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/content/17?expand=*",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"content",
+								"17"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Content By Id With Child Pages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/content/17/children",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"content",
+								"17",
+								"children"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Content By Id - Espanol",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/content/17/",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"content",
+								"17",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Content By Id - fr-ca",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fr-CA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/content/17/",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"content",
+								"17",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Content By ID - Return Specified Fields Only",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/content/17/?select=MainContentArea,TeaserText,MetaTitle",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"content",
+								"17",
+								""
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "MainContentArea,TeaserText,MetaTitle"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Friendly URL Request",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{apiurl}}en/viewpoints/credit-cards/6-credit-card-tips-for-smart-users/",
+							"host": [
+								"{{apiurl}}en"
+							],
+							"path": [
+								"viewpoints",
+								"credit-cards",
+								"6-credit-card-tips-for-smart-users",
+								""
+							],
+							"query": [
+								{
+									"key": "top",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Blocks By Folder ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/content/141/children",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"content",
+								"141",
+								"children"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Content Definitions API",
+			"item": [
+				{
+					"name": "Get All Content Type Definitions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contenttypes",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contenttypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Blog Item Page Type Definition",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contenttypes/{eaacadf2-3e89-4117-adeb-f8d43565d2f4}",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contenttypes",
+								"{eaacadf2-3e89-4117-adeb-f8d43565d2f4}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Block Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"name\": \"apiblock\",\r\n  \"baseType\": \"block\",\r\n  \"version\": \"2.1.0\",\r\n  \"editSettings\": {\r\n    \"displayName\": \"API Block\",\r\n    \"description\": \"Block type created via API\",\r\n    \"available\": true,\r\n    \"sortOrder\": 0\r\n  },\r\n  \"properties\": [\r\n    {\r\n      \"name\": \"title\",\r\n      \"dataType\": \"PropertyString\",\r\n      \"branchSpecific\": true,\r\n      \"editSettings\": {\r\n        \"visibility\": \"default\",\r\n        \"displayName\": \"title\",\r\n        \"groupName\": \"text\",\r\n        \"sortOrder\": 0,\r\n        \"helpText\": \"string\",\r\n        \"hint\": \"string\"\r\n      },\r\n      \"validation\": [\r\n        {\r\n          \"name\": \"string\",\r\n          \"severity\": \"none\",\r\n          \"errorMessage\": \"string\"\r\n        }\r\n      ],\r\n      \"itemType\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contenttypes",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contenttypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Block Type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"name\": \"apiblock\",\r\n  \"baseType\": \"block\",\r\n  \"version\": \"2.1.0\",\r\n  \"editSettings\": {\r\n    \"displayName\": \"API Block\",\r\n    \"description\": \"Block type created via API\",\r\n    \"available\": true,\r\n    \"sortOrder\": 0\r\n  },\r\n  \"properties\": [\r\n    {\r\n      \"name\": \"title\",\r\n      \"dataType\": \"PropertyString\",\r\n      \"branchSpecific\": true,\r\n      \"editSettings\": {\r\n        \"visibility\": \"default\",\r\n        \"displayName\": \"string\",\r\n        \"groupName\": \"text\",\r\n        \"sortOrder\": 0,\r\n        \"helpText\": \"string\",\r\n        \"hint\": \"string\"\r\n      },\r\n      \"validation\": [\r\n        {\r\n          \"name\": \"string\",\r\n          \"severity\": \"none\",\r\n          \"errorMessage\": \"string\"\r\n        }\r\n      ],\r\n      \"itemType\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contenttypes/{3fa85f64-5717-4562-b3fc-2c963f66afa6}",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contenttypes",
+								"{3fa85f64-5717-4562-b3fc-2c963f66afa6}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Content Management API",
+			"item": [
+				{
+					"name": "Update Content Instance - Page",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Giving Back to Others\",\r\n  \"MetaTitle\": {\r\n    \"value\": \"Giving Back to Others\",\r\n    \"propertyDataType\": \"PropertyLongString\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contentmanagement/73",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contentmanagement",
+								"73"
+							],
+							"query": [
+								{
+									"key": "ClientId",
+									"value": "postman-client",
+									"disabled": true
+								},
+								{
+									"key": "ClientSecret",
+									"value": "postman",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Block Type Instance",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"contentLink\": {\r\n          \"id\": 0,\r\n          \"workId\": 0,\r\n          \"guidValue\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n          \"providerName\": \"string\"\r\n     },\r\n     \"language\": {\r\n          \"name\": \"en\"\r\n     },\r\n     \"contentType\": [\r\n          \"apiblock\"\r\n     ],\r\n     \"parentLink\": {\r\n          \"id\": 3,\r\n          \"providerName\": \"string\"\r\n     },\r\n     \"name\": \"Block Created by API\",\r\n     \"status\": \"CheckedIn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contentmanagement?data",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contentmanagement"
+							],
+							"query": [
+								{
+									"key": "ClientId",
+									"value": "postman-client",
+									"disabled": true
+								},
+								{
+									"key": "ClientSecret",
+									"value": "postman",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Block Instance",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-epi-permanent-delete",
+								"value": "true",
+								"description": "Set to true in order to permanently delete the content. Otherwise it will be moved to the wastebasket.",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contentmanagement/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contentmanagement",
+								"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+							],
+							"query": [
+								{
+									"key": "ClientId",
+									"value": "postman-client",
+									"disabled": true
+								},
+								{
+									"key": "ClientSecret",
+									"value": "postman",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New StandardPage Instance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"contentLink\": {\r\n          \"id\": 0,\r\n          \"workId\": 0,\r\n          \"guidValue\": \"38cd4f89-612c-4f5b-925f-f06816b661d1\",\r\n          \"providerName\": \"string\"\r\n     },\r\n     \"language\": {\r\n          \"name\": \"en\"\r\n     },\r\n     \"contentType\": [\r\n          \"StandardPage\"\r\n     ],\r\n     \"parentLink\": {\r\n          \"id\": 14,\r\n          \"providerName\": \"string\"\r\n     },\r\n     \"name\": \"Page Created by API\",\r\n     \"status\": \"CheckedIn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contentmanagement?data",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contentmanagement"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete New StandardPage instance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contentmanagement/38cd4f89-612c-4f5b-925f-f06816b661d1",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contentmanagement",
+								"38cd4f89-612c-4f5b-925f-f06816b661d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Media Asset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"contentLink\": {\r\n          \"id\": 0,\r\n          \"workId\": 0,\r\n          \"guidValue\": \"79fcc257-a3d9-4818-b9a1-587971a61d4f\",\r\n          \"providerName\": \"string\"\r\n     },\r\n     \"language\": {\r\n          \"name\": \"en\"\r\n     },\r\n     \"contentType\": [\r\n          \"ImageMediaData\"\r\n     ],\r\n     \"parentLink\": {\r\n          \"id\": 3,\r\n          \"providerName\": \"string\"\r\n     },\r\n     \"name\": \"Image Created by API\",\r\n     \"status\": \"Published\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contentmanagement?file=\"E:\\\\Temp\\\\lemon.jpg\"",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contentmanagement"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "\"E:\\\\Temp\\\\lemon.jpg\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Media Asset",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiurl}}api/episerver/v3.0/contentmanagement/79fcc257-a3d9-4818-b9a1-587971a61d4f",
+							"host": [
+								"{{apiurl}}api"
+							],
+							"path": [
+								"episerver",
+								"v3.0",
+								"contentmanagement",
+								"79fcc257-a3d9-4818-b9a1-587971a61d4f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{contentApiToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const getTokenRequest = {",
+					"    method: 'POST',",
+					"    url: pm.variables.get('apiurl') + 'api/episerver/connect/token',",
+					"    header: 'Content-Type:application/x-www-form-urlencoded',",
+					"    body: {",
+					"        mode: 'urlencoded',",
+					"        urlencoded: [",
+					"            { key: 'grant_type', value: 'client_credentials'},",
+					"            { key: 'client_id', value: 'postman-client'},",
+					"            { key: 'client_secret', value: 'postman'},",
+					"            { key: 'scope', value: 'epi_content_delivery epi_content_management epi_content_definitions'},",
+					"        ]",
+					"    }",
+					"};",
+					"",
+					"// pm.sendRequest(getTokenRequest, (err, response) => {",
+					"//     console.log(response.json());",
+					"//     pm.variables.set(\"contentApiToken\", response.json().access_token);",
+					"// });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiurl",
+			"value": "http://localhost:4747/"
+		},
+		{
+			"key": "contentApiToken",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
